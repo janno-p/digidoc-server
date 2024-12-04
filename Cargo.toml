@@ -1,0 +1,22 @@
+[package]
+name = "digidoc-server"
+version = "0.1.0"
+edition = "2021"
+links = "digidocpp"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+path = "src/main.rs"
+name = "digidoc-server"
+
+[dependencies]
+actix-web = "4.9.0"
+config = "0.14.1"
+cxx = "1.0.124"
+serde = { version = "1.0.215", features = ["derive"] }
+tokio = { version = "1.42.0", features = ["macros", "rt-multi-thread"] }
+
+[build-dependencies]
+cxx-build = "1.0.91"
